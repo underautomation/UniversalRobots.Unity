@@ -19,7 +19,7 @@ Build your **Digital Twins**, **3D simulations**, and **Industry 4.0** experienc
 - ✔️ **URScript Commands** – Control robots directly in real time  
 - ✔️ **Dashboard Server** – Manage robot state, programs, and power  
 - ✔️ **Secure Connections** – Supports SSH & SFTP  
-- ✔️ **Cross-Platform** – Works on Windows, Linux, and macOS  
+- ✔️ **Cross-Platform** – Works on every platform supported by Unity (Windows, Linux, MacOS, iOS, Android, WebGL, ...)
 - ✔️ **Commercial License** – Deploy freely, no royalties  
 
 ---
@@ -60,7 +60,7 @@ This project is perfect for:
 ## 🔍 Compatibility
 
 - ✅ Robots: UR3, UR5, UR10, UR16, UR20, UR30, CB-Series, e-Series, Polyscope, Polyscope X  
-- ✅ OS: Windows, Linux, macOS  
+- ✅ OS: Windows, Linux, macOS, iOS, Android
 - ✅ .NET: Framework ≥3.5, .NET Standard, .NET Core, .NET 5/6/8/9  
 
 🔗 Also available for **[🟨 LabVIEW](https://github.com/underautomation/UniversalRobots.vi)** · **[🐍 Python](https://github.com/underautomation/UniversalRobots.py)** · **[💻 .NET](https://github.com/underautomation/UniversalRobots.py)**
