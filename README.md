@@ -1,103 +1,60 @@
-# 🤖 Universal Robots + Unity = Awesome
+# Universal Robots SDK for Unity
 
-**Seamlessly connect Unity with real Universal Robots arms.**  
-Build your **Digital Twins**, **3D simulations**, and **Industry 4.0** experiences like a pro — without breaking a sweat (or the bank).
-
-> 🚀 Powered by [UnderAutomation Universal Robots SDK](https://underautomation.com/universal-robots)
-
----
+This Unity project connects a Unity scene to real Universal Robots arms with the
+[UnderAutomation Universal Robots SDK](https://underautomation.com/universal-robots). Use it as a starting
+point for digital twins, 3D simulations and supervision of robot cells.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/underautomation/UniversalRobots.Unity/refs/heads/main/.github/assets/ur-unity.gif" alt="UR demo Unity"/>
 </p>
 
----
+- Product page: [underautomation.com/universal-robots](https://underautomation.com/universal-robots)
+- Documentation: [underautomation.com/universal-robots/documentation](https://underautomation.com/universal-robots/documentation)
+- Also available for [.NET](https://github.com/underautomation/UniversalRobots.NET), [Python](https://github.com/underautomation/UniversalRobots.py) and [LabVIEW](https://github.com/underautomation/UniversalRobots.vi)
 
-## 🚀 TL;DR (Too Long; Didn’t Read)
+## What the project contains
 
-- ✔️ **Full RTDE Support** – Real-time read/write at up to 500Hz  
-- ✔️ **URScript Commands** – Control robots directly in real time  
-- ✔️ **Dashboard Server** – Manage robot state, programs, and power  
-- ✔️ **Secure Connections** – Supports SSH & SFTP  
-- ✔️ **Cross-Platform** – Works on every platform supported by Unity (Windows, Linux, MacOS, iOS, Android, WebGL, ...)
-- ✔️ **Commercial License** – Deploy freely, no royalties  
+- **The SDK:** `Assets/Plugins/UnderAutomation.UniversalRobots.dll`, the .NET Framework 3.5 build of the
+  SDK. It gives the same interfaces as the .NET package: RTDE (up to 500 Hz), Primary Interface and
+  URScript, Dashboard Server, REST API, SSH and SFTP, kinematics.
+- **A demo scene** (`Assets/Scenes/LoadURDF.unity`, script `Assets/Test.cs`): it loads the UR3, UR5, UR10,
+  UR3e, UR5e, UR10e, UR16e, UR20 and UR30 models, connects to a robot and moves the 3D model with the
+  joint positions of the real robot.
+- **3D models of the arms:** URDF descriptions and meshes taken from
+  [ros-industrial/universal_robot](https://github.com/ros-industrial/universal_robot). Only the 3D files are
+  used: the project does not need ROS. The meshes of some models come with the terms of use of Universal
+  Robots (`LICENSE.txt` in their folder).
+- **URDF loader:** [gkjohnson/urdf-loaders](https://github.com/gkjohnson/urdf-loaders), in
+  `Assets/URDFLoader`, with support of the DAE files in the Unity Editor.
 
----
+The DLL is fully managed, with no native dependency.
 
-## 🎮 What This Unity Project Brings
+## How to start
 
-This Unity package delivers:
+1. Clone this repository and open the folder in Unity Hub.
+2. Open the scene `Assets/Scenes/LoadURDF.unity`.
+3. Press Play, type the IP address of your robot or of URSim in the field at the top left, then connect.
 
-🦾 **3D models of UR robot arms**  
-- Imported from: [ros-industrial/universal_robot](https://github.com/ros-industrial/universal_robot)  
-- Uses widely accepted and community-validated **URDF definitions**  
-- ⚠️ *Fully independent from ROS — we just borrow the 3D assets and definitions!*
+The Release workflow of the SDK updates the DLL of `Assets/Plugins` on the `main` branch at each release.
+You can also replace it with the `net35` DLL of the [UniversalRobots.NET releases](https://github.com/underautomation/UniversalRobots.NET/releases).
 
-🧠 **URDF loading made easy**  
-- Uses this awesome URDF loader: [gkjohnson/urdf-loaders](https://github.com/gkjohnson/urdf-loaders)  
-- Supports **DAE files** natively in Unity Editor
+## Compatibility
 
-🧩 **Ready-to-go demo scene**  
-- Instantiates **all UR robot models** (UR3, UR5, UR10, UR16, UR20, UR30)  
-- Connects to **real robots** via `UnderAutomation.UniversalRobots.dll`  
-- Shows **real-time joint updates** from the live robot  
+- **Robots:** CB-Series and e-Series robots and the newer models, with PolyScope or PolyScope X, and URSim.
+- **Operating systems:** Windows, Linux, macOS, iOS, Android.
+- **Unity:** the DLL targets .NET Framework 3.5.
 
----
+## License
 
-## 🌍 Why This Rocks for Industry 4.0
+The SDK needs a commercial license. A 30-day trial starts at the first use, no key needed.
 
-This project is perfect for:
+- License agreement: [underautomation.com/universal-robots/eula](https://underautomation.com/universal-robots/eula) and [License.md](License.md)
+- Third-party code included in the DLL: [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt) (added at the next release)
+- Trial, license key and source license: [underautomation.com/universal-robots/documentation/license](https://underautomation.com/universal-robots/documentation/license)
+- Prices and quote: [underautomation.com/universal-robots](https://underautomation.com/universal-robots)
 
-- 🧿 **Digital Twins**  
-- 🕹️ **3D simulation & control of robotics cells**  
-- 🛠️ **Robot programming & testing environments**  
-- 📱 **Multi-platform Unity apps** (Windows, Linux, iOS, Android...)  
-- 🧰 **Flexible, customizable 3D engine** for rapid prototyping & deployment  
-- 💸 All at a **reasonable cost**, with **massive flexibility**
+## Support
 
----
-
-## 🔍 Compatibility
-
-- ✅ Robots: UR3, UR5, UR10, UR16, UR20, UR30, CB-Series, e-Series, Polyscope, Polyscope X  
-- ✅ OS: Windows, Linux, macOS, iOS, Android
-- ✅ .NET: Framework ≥3.5, .NET Standard, .NET Core, .NET 5/6/8/9  
-
-🔗 Also available for **[🟨 LabVIEW](https://github.com/underautomation/UniversalRobots.vi)** · **[🐍 Python](https://github.com/underautomation/UniversalRobots.py)** · **[💻 .NET](https://github.com/underautomation/UniversalRobots.py)**
-
-More info 👉 [underautomation.com/universal-robots](https://underautomation.com/universal-robots)
-
----
-
-## ⭐ How to Support
-
-If you like this project:
-
-- ⭐ **Star the repo**  
-- 👁️ **Watch to stay updated**  
-- 📢 **Spread the word to fellow robotics devs!**
-
----
-
-## 📢 Contributing
-
-We ❤️ contributions!  
-Feel free to:
-
-- 🐞 Report issues via GitHub Issues  
-- ✨ Submit pull requests with improvements  
-- 💡 Share your feedback or feature requests  
-
----
-
-## 📜 License
-
-⚠️ This SDK requires a **commercial license** to use.  
-Learn more: [UnderAutomation Licensing](https://underautomation.com/universal-robots)
-
----
-
-## 📬 Need Help?
-
-- 📖 Check the **[Documentation](https://underautomation.com/universal-robots)**  
-- 📩 Reach out via **[Support](https://underautomation.com/contact)**  
+- Documentation: [underautomation.com/universal-robots/documentation](https://underautomation.com/universal-robots/documentation)
+- Issues: [GitHub Issues](https://github.com/underautomation/UniversalRobots.Unity/issues)
+- Contact: [underautomation.com/contact](https://underautomation.com/contact)
